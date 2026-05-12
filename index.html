@@ -8,11 +8,11 @@
   <meta name="keywords" content="Sarah Stafford, Sarah L. Stafford, Warren Ohio marketing, Warren Ohio communications, marketing strategist Warren Ohio, content creation Warren Ohio, event management Warren Ohio, SEO Warren Ohio, social media Warren Ohio" />
   <meta name="author" content="Sarah L. Stafford" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sarahstafford.io/" />
+  <link rel="canonical" href="https://sarahlstafford.com/" />
   <meta property="og:title" content="Sarah L. Stafford | Marketing & Communications Strategist | Warren, Ohio" />
   <meta property="og:description" content="Strategic communications, content creation, events, and marketing for businesses of all sizes. Based in Warren, Ohio." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sarahstafford.io/" />
+  <meta property="og:url" content="https://sarahlstafford.com/" />
   <meta name="geo.region" content="US-OH" />
   <meta name="geo.placename" content="Warren, Ohio" />
 
@@ -22,7 +22,7 @@
     "@type": "LocalBusiness",
     "name": "Sarah L. Stafford",
     "description": "Strategic communications professional specializing in marketing strategy, content creation, events, SEO, and social media.",
-    "url": "https://sarahstafford.io",
+    "url": "https://sarahlstafford.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Warren",
@@ -62,6 +62,12 @@
       align-items: center;
       padding: 0 48px;
       height: 68px;
+      line-height: 1;
+    }
+
+    .nav-logo, .nav-links a {
+      display: flex;
+      align-items: center;
     }
 
     .nav-logo {
@@ -201,7 +207,6 @@
     @media (max-width: 600px) {
       .grid { grid-template-columns: 1fr; }
       .card { border-right: none; }
-      .card-overlay { opacity: 1; background: rgba(30,26,22,0.6); }
     }
   </style>
 </head>
@@ -275,7 +280,7 @@
     </div>
 
     <div class="card">
-      <img src="https://cdn.prod.website-files.com/6180926700fd8d4c8b98dfce/61d3e529acd754f66763a87f_pexels-pixabay-267350.jpg" alt="Social Media" />
+      <img src="https://raw.githubusercontent.com/slstafford0253-oss/Portfolio-Site/main/berke-citak-0cpyFsSUiSc-unsplash.jpg" alt="Social Media" />
       <div class="card-overlay">
         <h3>Social Media</h3>
         <p>I'll help you find the right platforms, optimize your profiles, and create content to elevate your social presence without the overwhelm.</p>
@@ -295,5 +300,18 @@
     <p>© 2026 Sarah L. Stafford</p>
   </footer>
 
+  <script>
+    // Tap to reveal overlay on touch devices
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const overlay = card.querySelector('.card-overlay');
+        const isVisible = overlay.style.opacity === '1';
+        // Hide all overlays first
+        document.querySelectorAll('.card-overlay').forEach(o => o.style.opacity = '0');
+        // Toggle tapped one
+        if (!isVisible) overlay.style.opacity = '1';
+      });
+    });
+  </script>
 </body>
 </html>
